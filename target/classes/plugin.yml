@@ -1,0 +1,9 @@
+name: CakeWars
+version: '1.0'
+main: ch.andu.cakeWars.CakeWars
+api-version: '1.21'
+authors: [ anducrafter ]
+description: CakeWars
+commands:
+  test:
+  setup:
