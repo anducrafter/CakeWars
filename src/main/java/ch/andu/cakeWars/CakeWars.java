@@ -28,7 +28,7 @@ public final class CakeWars extends JavaPlugin {
     private Hikari db;
     private GameManager gameManager;
     private Locations locationsconfig;
-
+    String test;
 
     @Override
     public void onEnable() {
