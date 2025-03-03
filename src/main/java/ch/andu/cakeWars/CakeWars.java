@@ -36,6 +36,7 @@ public final class CakeWars extends JavaPlugin {
         instance = this;
         createEmptyWorld();
         locationsconfig = new Locations(new FileManager("locations"));
+        new Language().loadLanguages();
         gameManager = new GameManager(this);
         gameManager.getVoteManager().loadJsonSchemetica();
 
@@ -55,7 +56,7 @@ public final class CakeWars extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new LeaveListener(gameManager),this);
         Bukkit.getPluginManager().registerEvents(new BlockListener(gameManager),this);
         Bukkit.getPluginManager().registerEvents(new ShopListener(),this);
-        new Language().loadLanguages();
+
 
         
     }
@@ -65,7 +66,7 @@ public final class CakeWars extends JavaPlugin {
 /*
 add unload world to confirm the map reset
  */
-        //Map reset, would is not saved..
+        //Map reset, world is not saved..
        Bukkit.unloadWorld("bedwars",false);
 
     }

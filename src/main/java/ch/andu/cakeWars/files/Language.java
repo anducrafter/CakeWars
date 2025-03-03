@@ -25,8 +25,9 @@ public class Language {
     }
 
     public String getPlayerMessage(Player player, String key, Map<String, String> replacements) {
-        Locale playerLocale = new Locale("en"); // Hier PLAYERCORE hinzufügen
-        ResourceBundle bundle = languageBundles.getOrDefault(playerLocale, languageBundles.get(new Locale("en")));
+        Locale playerLocale = new Locale("EN"); // Hier PLAYERCORE hinzufügen
+        ResourceBundle bundle = languageBundles.getOrDefault(playerLocale, languageBundles.get(new Locale("EN")));
+       Bukkit.getConsoleSender().sendMessage(""+bundle.getLocale()+" "+bundle);
         if (bundle == null) {
             throw new IllegalStateException("Language bundle is null for locale: " + playerLocale);
         }

@@ -81,6 +81,13 @@ public class Teammanager {
         players.remove(uuid);
     }
 
+    public void playerDied(String uuid){
+        //Player is perma dead
+        if(!players.containsKey(uuid))return;
+        Team team = teams.get(players.get(uuid));
+        team.remouveDeathPlayer(uuid);
+    }
+
 
     public boolean isInTeam(String uuid){
         if(players.containsKey(uuid)){

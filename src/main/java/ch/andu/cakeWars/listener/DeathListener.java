@@ -40,7 +40,7 @@ public class DeathListener implements Listener {
         event.setDeathMessage(new Language().getPlayerMessage(event.getEntity(),"Death_message",null));
 
         gameManager.getPlayerManager().setSpectator(player);
-        gameManager.getTeammanager().remouvePlayer(player.getUniqueId().toString());
+        gameManager.getTeammanager().playerDied(player.getUniqueId().toString());
         new WinManager(gameManager).GameFinished();
         //Else death....
 

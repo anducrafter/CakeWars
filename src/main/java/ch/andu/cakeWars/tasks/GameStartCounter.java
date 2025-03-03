@@ -54,7 +54,7 @@ public class GameStartCounter extends BukkitRunnable {
         //add
         if(timeleft < 10){
             HashMap<String,String> replace = new HashMap<>();
-            replace.put("%map%",timeleft+"");
+            replace.put("%seconds%",timeleft+"");
             new Language().getAllPlayerMessage("Game_countdown_message",replace);
         }
 

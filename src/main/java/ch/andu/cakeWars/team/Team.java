@@ -8,6 +8,7 @@ import java.util.Set;
 public class Team {
     private String name;
     private  Set<String> members;
+    private Set<String> deathplayers;
     private boolean cake = true;
     private Location spawn;
     private Location cakeloc;
@@ -23,6 +24,13 @@ public class Team {
     public void addPlayer(String uuid){
         members.add(uuid);
         players +=1;
+        adddeathPlayer(uuid);
+    }
+    public void adddeathPlayer(String uuid){
+        deathplayers.add(uuid);
+    }
+    public void remouveDeathPlayer(String uuid) {
+        deathplayers.remove((uuid));
     }
 
     public void remouvePlayer(String uuid){
